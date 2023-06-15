@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MatriculaFacil</string>
+    <string name="tile_activity_login">LoginActivity</string>
+    <string-array name="Tipo">
+        <item>Tipo de cama</item>
+        <item>Cama de solteiro</item>
+        <item>Cama de casal</item>
+        <item>Cama Box de casal</item>
+        <item>Cama Box Premium de casal </item>
+
+    </string-array>
+</resources>

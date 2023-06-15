@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DAC4F4"
+    android:padding="0dp"
+    tools:context=".PersonnelInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DAC4F4">
+
+        <TextView
+            android:id="@+id/txtDadosPessoais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="Dados Pessoais"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/conjDados"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txtDadosPessoais"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:padding="20dp"
+                android:hint="Nome completo" />
+            <EditText
+                android:id="@+id/edPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:inputType="number"
+                android:ems="20"
+                android:hint="Telefone" />
+            <EditText
+                android:id="@+id/edMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:ems="20"
+                android:hint="E-mail" />
+            <EditText
+                android:id="@+id/edAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:ems="20"
+                android:hint="Endereço" />
+            <EditText
+                android:id="@+id/edNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="N° da rua" />
+            <Button
+                android:id="@+id/bntNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
