@@ -11,7 +11,6 @@ class PersonnelInfoActivity : AppCompatActivity() {
     private lateinit var edAddress: EditText
     private lateinit var edName: EditText
     private lateinit var edPhone: EditText
-    private lateinit var edMail: EditText
     private lateinit var edNumber: EditText
     private lateinit var btnNext: Button
 
@@ -23,7 +22,6 @@ class PersonnelInfoActivity : AppCompatActivity() {
         edAddress = findViewById(R.id.edAddress)
         edName = findViewById(R.id.edName)
         edPhone = findViewById(R.id.edPhone)
-        edMail = findViewById(R.id.edMail)
         edNumber = findViewById(R.id.edNumber)
 
         btnNext.setOnClickListener {
@@ -31,7 +29,6 @@ class PersonnelInfoActivity : AppCompatActivity() {
             i.putExtra("name", edName.text.toString())
             i.putExtra("address", edAddress.text.toString())
             i.putExtra("phone", edPhone.text.toString())
-            i.putExtra("email", edMail.text.toString())
             i.putExtra("numberofperson", edNumber.text.toString())
             startActivity(i)
         }

@@ -9,10 +9,8 @@ import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
-
-import android.view.View
 import android.widget.DatePicker
-import java.util.*
+
 
 class RoomInfoActivity : AppCompatActivity() {
     private lateinit var myCalendar: Calendar
@@ -24,9 +22,9 @@ class RoomInfoActivity : AppCompatActivity() {
     private lateinit var phone: String
     private lateinit var address: String
     private lateinit var numberofperson: String
-    private lateinit var spinnerType: Spinner
-    private lateinit var btnPreview: Button
+    private lateinit var spinerType: Spinner
     private lateinit var roomType: String
+    private lateinit var btnPreview: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,20 +35,21 @@ class RoomInfoActivity : AppCompatActivity() {
         email = i.getStringExtra("email").toString()
         phone = i.getStringExtra("phone").toString()
         address = i.getStringExtra("address").toString()
-        numberofperson = i.getStringExtra("numberofperson").toString()
-
+        numberofperson = i.getStringExtra("Númbero de pessoas").toString()
         myCalendar = Calendar.getInstance()
 
         edittext = findViewById(R.id.edCheckin)
         edCheckout = findViewById(R.id.edCheckout)
-        spinnerType = findViewById(R.id.spinnerType)
+        spinerType = findViewById(R.id.spinnerType)
         btnPreview = findViewById(R.id.btnPreview)
         edNum = findViewById(R.id.edNum)
 
-        btnPreview.setOnClickListener(View.OnClickListener {
+        roomType = spinerType.toString()
+
+        btnPreview.setOnClickListener({
             val i = Intent(this@RoomInfoActivity, FinalActivity::class.java)
             i.putExtra("nome", name)
-            i.putExtra("Endereço", address)
+            i.putExtra("EndereÃ§o", address)
             i.putExtra("telefone", phone)
             i.putExtra("e-mail", email)
             i.putExtra("RoomType", roomType)
@@ -67,7 +66,7 @@ class RoomInfoActivity : AppCompatActivity() {
             updateLabel(myCalendar, edittext)
         }
 
-        edittext.setOnClickListener(View.OnClickListener {
+        edittext.setOnClickListener({
             DatePickerDialog(
                 this@RoomInfoActivity,
                 date1,
@@ -84,7 +83,7 @@ class RoomInfoActivity : AppCompatActivity() {
             updateLabel(myCalendar, edCheckout)
         }
 
-        edCheckout.setOnClickListener(View.OnClickListener {
+        edCheckout.setOnClickListener({
             DatePickerDialog(
                 this@RoomInfoActivity,
                 date2,
@@ -96,7 +95,7 @@ class RoomInfoActivity : AppCompatActivity() {
     }
 
     private fun updateLabel(myCalendar: Calendar, editText: EditText) {
-        val myFormat = "MM/dd/yy"
+        val myFormat = "dd/MM/yy"
         val sdf = SimpleDateFormat(myFormat, Locale.US)
         editText.setText(sdf.format(myCalendar.time))
     }

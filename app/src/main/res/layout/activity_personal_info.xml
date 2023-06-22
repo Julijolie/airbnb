@@ -50,13 +50,7 @@
                 android:inputType="number"
                 android:ems="20"
                 android:hint="Telefone" />
-            <EditText
-                android:id="@+id/edMail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:ems="20"
-                android:hint="E-mail" />
+
             <EditText
                 android:id="@+id/edAddress"
                 android:layout_width="match_parent"

@@ -7,7 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="AirBnb"
         android:supportsRtl="true"
         android:theme="@style/Theme.AirBnb"
         tools:targetApi="31">
@@ -24,7 +24,7 @@
 
         <activity android:name=".LoginActivity" />
         <activity android:name=".PersonnelInfoActivity"
-            android:label="My home screen" />
+            android:label="AirBnb" />
         <activity android:name=".RoomInfoActivity" />
         <activity android:name=".FinalActivity" />
 

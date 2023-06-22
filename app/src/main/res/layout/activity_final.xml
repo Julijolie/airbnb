@@ -16,7 +16,7 @@
         android:layout_marginTop="32dp"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Confirmaçã"
+        android:text="Confirmação"
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,5 +33,13 @@
         android:textColor="#f32"
         tools:layout_editor_absoluteX="84dp"
         tools:layout_editor_absoluteY="167dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/stat_sys_headset" />
+
 
 </LinearLayout>

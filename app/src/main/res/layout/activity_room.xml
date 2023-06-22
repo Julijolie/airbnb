@@ -49,7 +49,7 @@
                 android:ems="10"
                 android:hint="Número do quarto" />
 
-            <TextView
+            <EditText
                 android:id="@+id/edCheckin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:cursorVisible="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false" />
-            <TextView
+            <EditText
                 android:id="@+id/edCheckout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
